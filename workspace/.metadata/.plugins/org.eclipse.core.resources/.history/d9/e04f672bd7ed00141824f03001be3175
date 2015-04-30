@@ -1,0 +1,85 @@
+package ufc.quixada.trocandoideias;
+
+import ufc.quixada.trocandoideias.bd.DatabaseHelper;
+import android.app.Activity;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.text.Editable;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class Cadastro extends Activity {
+
+	SQLiteDatabase sqlDB;
+	ContentValues values;
+	
+	Editable login;
+	Editable email;
+	Editable senha;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_cadastro);
+		
+		DatabaseHelper db = new DatabaseHelper(Cadastro.this);
+	    sqlDB = db.getReadableDatabase();
+	    
+	    EditText emailText = (EditText) findViewById(R.id.email);
+	    EditText loginText = (EditText) findViewById(R.id.usernameCadastro);
+	    EditText senhaText = (EditText) findViewById(R.id.senhaCadastro);
+	    
+	    login = loginText.getText();
+	    email = emailText.getText();
+	    senha = senhaText.getText();
+	        
+    }
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.cadastro, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	public void cadastrar(View view){
+		values = new ContentValues();
+        values.put(DatabaseHelper.COL_NOME, login.toString());
+        values.put(DatabaseHelper.COL_EMAIL, email.toString());
+        values.put(DatabaseHelper.COL_SENHA, senha.toString());
+         
+        sqlDB.insert(DatabaseHelper.TABLE_USUARIO, null, values);
+        
+        Cursor cursor = sqlDB.rawQuery("SELECT * FROM usuario WHERE id = ?", new String[]{ "1" });
+        
+        if (cursor != null && cursor.moveToFirst()) {
+            String login = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_NOME));
+            String email = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_EMAIL));
+            String senha = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_SENHA));
+
+            
+            // Dumps "Title: Test Title Content: Test Content"
+    		Toast.makeText(this, "Nome: " + login + " Email: " + email + "Senha: "+ senha, Toast.LENGTH_LONG).show();
+
+         
+            cursor.close();
+        }
+	}
+}

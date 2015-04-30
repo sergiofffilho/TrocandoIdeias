@@ -1,0 +1,5 @@
+package ufc.quixada.trocandoideias.bd;
+
+public class DatabaseContract {
+
+}

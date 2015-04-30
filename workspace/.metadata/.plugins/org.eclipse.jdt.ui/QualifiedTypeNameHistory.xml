@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="ufc.quixada.trocandoideias.R.layout"/>
+<fullyQualifiedTypeName name="ufc.quixada.trocandoideias.AddProjetos"/>
+<fullyQualifiedTypeName name="android.app.Dialog"/>
+<fullyQualifiedTypeName name="android.text.Editable"/>
+<fullyQualifiedTypeName name="android.provider.BaseColumns"/>
+<fullyQualifiedTypeName name="android.database.sqlite.SQLiteDatabase"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="ufc.quixada.trocandoideias.bd.DatabaseHelper"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="ufc.quixada.trocandoideias.Cadastro"/>
+<fullyQualifiedTypeName name="android.database.sqlite.SQLiteOpenHelper"/>
+<fullyQualifiedTypeName name="ufc.quixada.trocandoideias.bd.DatabaseAdapter"/>
+<fullyQualifiedTypeName name="ufc.quixada.trocandoideias.TelaLogin"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="android.database.Cursor"/>
+</qualifiedTypeNameHistroy>

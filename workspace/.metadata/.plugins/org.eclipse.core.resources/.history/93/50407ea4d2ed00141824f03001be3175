@@ -1,0 +1,12 @@
+package ufc.quixada.trocandoideias.bd;
+
+import android.provider.BaseColumns;
+
+public final class DatabaseContract {
+	 
+    public static abstract class Post implements BaseColumns {
+        public static final String TABLE_NAME = "posts";
+        public static final String COL_TITLE = "title";
+        public static final String COL_CONTENT = "content";
+    }
+}

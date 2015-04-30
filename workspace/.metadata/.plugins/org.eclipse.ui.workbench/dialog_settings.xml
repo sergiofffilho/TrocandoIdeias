@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="1025" key="dialogWidth"/>
+		<item value="525" key="dialogHeight"/>
+		<list key="orderedProviders">
+			<item value="org.eclipse.ui.perspectives"/>
+		</list>
+		<list key="textArray">
+			<item value="ddms"/>
+		</list>
+		<list key="orderedElements">
+			<item value="com.android.ide.eclipse.ddms.Perspective"/>
+		</list>
+		<list key="textEntries">
+			<item value="1"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="com.android.ide.eclipse.editors.wizards.NewActivityWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.android.ide.eclipse.wizards.category"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="com.android.ide.eclipse.adt.project.ImportProjectWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="com.android.ide.eclipse.wizards.category"/>
+		</list>
+	</section>
+</section>

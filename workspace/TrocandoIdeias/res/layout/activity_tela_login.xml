@@ -6,38 +6,49 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ufc.quixada.trocandoideias.TelaLogin" >
+    tools:context="ufc.quixada.trocandoideias.TelaLogin"
+    android:background="@drawable/back01" >
 
     <EditText
         android:id="@+id/usernameCadastro"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:ems="10"
-        android:hint="@string/username" />
+        android:hint="@string/username"
+        android:textColor="#000000"
+        android:background="@drawable/design_text"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/senha"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/usernameCadastro"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="1dp"
         android:ems="10"
         android:hint="@string/senha"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:background="@drawable/design_text"
+        android:textAlignment="center"   />
 
-    <Button
+      <Button 
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/cadastro"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="40dp"
         android:layout_toLeftOf="@+id/cadastro"
         android:text="@string/logar"
-        android:onClick="login" />
+        android:onClick="login"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/desing_botao"/>
 
     <Button
         android:id="@+id/loginFacebook"
@@ -47,7 +58,12 @@
         android:layout_alignBottom="@+id/login"
         android:layout_alignParentRight="true"
         android:onClick="select"
-        android:text="@string/facebook" />
+        android:text="@string/facebook"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/desing_botao"
+         />
     
     <Button
         android:id="@+id/cadastro"
@@ -57,6 +73,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="47dp"
         android:text="@string/novoUsuario" 
-        android:onClick="irParaCadastro"/>
+        android:onClick="irParaCadastro"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/desing_botao"/>
 
 </RelativeLayout>

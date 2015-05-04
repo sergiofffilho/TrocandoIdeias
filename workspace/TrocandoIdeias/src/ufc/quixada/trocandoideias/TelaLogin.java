@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -28,6 +29,11 @@ public class TelaLogin extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_login);
                 
+        
+        ImageView image =(ImageView) findViewById(R.id.imagemTela);
+        image.setImageResource(R.drawable.imagemlampada);
+ 
+        
         
         loginText = (EditText) findViewById(R.id.usernameCadastro);
         senhaText = (EditText) findViewById(R.id.senha);
